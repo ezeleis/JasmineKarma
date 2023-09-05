@@ -20,5 +20,12 @@ export class ComponenteComponent {
     }
     return this.myArray;
   }
-
+  findItemIndex(item: string): number {
+    const index = this.myArray.indexOf(item);
+    if (index !== -1) {
+      return index;
+    } else {
+      throw new Error('Item não encontrado no array.');
+    }
+  }
 }

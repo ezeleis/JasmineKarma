@@ -41,4 +41,11 @@ describe('ComponenteComponent', () => {
     // Verifique se o item "lasanha" está contido no array
     expect(component.myArray).toContain('lasanha');
   });
+  it('deve lançar uma exceção se o item não for encontrado', () => {
+    const itemToFind = 'ItemQueNaoExiste';
+
+    // Use uma função anônima para chamar o método e capturar a exceção
+    expect(() => component.findItemIndex(itemToFind)).toThrowError('Item não encontrado no array.');
+  });
+
 });
