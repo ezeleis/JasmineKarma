@@ -49,3 +49,22 @@ describe('ComponenteComponent', () => {
   });
 
 });
+
+describe('Testes com variável global', () => {
+  let contadorGlobal = 0; // Variável global para armazenar o contador
+
+  beforeEach(() => {
+    contadorGlobal += 10; // Adiciona 10 à variável global antes de cada teste
+  });
+
+  it('deve ter contador igual a 10 no primeiro módulo', () => {
+    expect(contadorGlobal).toBe(10);
+  });
+
+  it('deve ter contador igual a 20 no segundo módulo', () => {
+    expect(contadorGlobal).toBe(20);
+  });
+
+  // Adicione mais testes conforme necessário
+});
+
