@@ -30,4 +30,12 @@ describe('ComponenteComponent', () => {
     // Verifique se o item foi adicionado no início do array
     expect(result[0]).toBe(itemToAdd);
   });
+  it('deve aumentar o tamanho do array ao adicionar um item', () => {
+    const itemToAdd = 'Novo Item';
+    const initialArrayLength = component.myArray.length;
+    const result = component.addItemToBeginning(itemToAdd);
+
+    expect(result.length).toBeGreaterThan(initialArrayLength);
+  });
+
 });

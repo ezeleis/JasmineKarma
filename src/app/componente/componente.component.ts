@@ -12,4 +12,13 @@ export class ComponenteComponent {
     this.myArray.unshift(item);
     return this.myArray;
   }
+
+  removeItem(item: string): string[] {
+    const index = this.myArray.indexOf(item);
+    if (index !== -1) {
+      this.myArray.splice(index, 1);
+    }
+    return this.myArray;
+  }
+
 }
