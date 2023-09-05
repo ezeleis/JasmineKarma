@@ -37,5 +37,8 @@ describe('ComponenteComponent', () => {
 
     expect(result.length).toBeGreaterThan(initialArrayLength);
   });
-
+  it('deve conter o item "lasanha" no array', () => {
+    // Verifique se o item "lasanha" está contido no array
+    expect(component.myArray).toContain('lasanha');
+  });
 });

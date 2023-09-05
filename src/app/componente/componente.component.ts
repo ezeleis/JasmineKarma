@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./componente.component.css']
 })
 export class ComponenteComponent {
-  myArray: string[] = [];
+  myArray: string[] = ["lasanha"];
 
   addItemToBeginning(item: string): string[] {
     this.myArray.unshift(item);
